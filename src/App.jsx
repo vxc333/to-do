@@ -6,7 +6,7 @@ function App() {
   const [currentTask, setCurrentTask] = useState("");
 
   const addTask = () => {
-    if (currentTask !== "") {
+    if (currentTask) {
       const newTask = {
         id: tasks.length + 1,
         title: currentTask,
@@ -14,6 +14,8 @@ function App() {
       };
       setTasks([...tasks, newTask]);
       setCurrentTask("");
+    }else{
+      alert("Adicione tarefa na área!")
     }
   };
 
