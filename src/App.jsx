@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div id="container">
-      <h1 id="title">Todo List</h1>
+      <h1>Todo List</h1>
 
       <div id="search">
         <input
@@ -45,7 +45,7 @@ function App() {
         <button onClick={addTask}>Adicionar Tarefa</button>
       </div>
 
-      <ul>
+      <ul id="task">
         {tasks.map((task) => (
           <li key={task.id}>
             <span
@@ -55,12 +55,14 @@ function App() {
             >
               {task.title}
             </span>
+            <div>
             <button id="remove" onClick={() => removeTask(task.id)}>
               Excluir
             </button>
             <button id="done" onClick={() => toggleCompleted(task.id)}>
               {task.done ? "Desmarcar" : "Marcar como Concluído"}
             </button>
+            </div>
           </li>
         ))}
       </ul>

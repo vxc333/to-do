@@ -1,43 +1,77 @@
-*{
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* --- */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
-#root{
-  margin: 0 auto;
-  
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
-h1 #title{
-  font-family: 'Inter';
+h1 {
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
   color: #000000;
+  padding-bottom: 16px;
 }
-
-#container h1{
+#container {
+  width: 768px;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container button {
+  background: #d9d9d9;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}
+img {
+  padding: 7px 15px;
   display: flex;
   justify-content: center;
 }
-
-input{
+input {
   width: 203px;
   height: 37px;
   border: 1px solid #000000;
   border-radius: 10px;
-  gap:14px;
+  gap: 14px;
 }
-
-#container button{
-  background: #D9D9D9;
+li {
+  background: #d9d9d9;
   border: 1px solid #000000;
   border-radius: 10px;
-}
-
-#search{
+  width: 593px;
+  margin-bottom: 16px;
+  list-style: none;
   display: flex;
-  gap:14px;
+  place-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+button{
+  padding: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  color: #000000;
+}
+#remove {
+  margin-right: 10px;
+}
+#search {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 47px;
 }
