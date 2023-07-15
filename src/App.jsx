@@ -6,7 +6,7 @@ function App() {
   const [currentTask, setCurrentTask] = useState("");
 
   const addTask = () => {
-    if (currentTask) {
+    if (currentTask.trim()) {
       const newTask = {
         id: tasks.length + 1,
         title: currentTask,
@@ -14,8 +14,8 @@ function App() {
       };
       setTasks([...tasks, newTask]);
       setCurrentTask("");
-    }else{
-      alert("Adicione tarefa na área!")
+    } else {
+      alert("Adicione tarefa na área!");
     }
   };
 
@@ -58,12 +58,12 @@ function App() {
               {task.title}
             </span>
             <div>
-            <button id="remove" onClick={() => removeTask(task.id)}>
-              Excluir
-            </button>
-            <button id="done" onClick={() => toggleCompleted(task.id)}>
-              {task.done ? "Desmarcar" : "Marcar como Concluído"}
-            </button>
+              <button id="remove" onClick={() => removeTask(task.id)}>
+                Excluir
+              </button>
+              <button id="done" onClick={() => toggleCompleted(task.id)}>
+                {task.done ? "Desmarcar" : "Marcar como Concluído"}
+              </button>
             </div>
           </li>
         ))}
